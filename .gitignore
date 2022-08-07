@@ -1,0 +1,6 @@
+*.mkv
+*.srt
+.idea
+.vscode
+venv
+*.pyc
