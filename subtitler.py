@@ -110,7 +110,7 @@ def download_subs(title, language, moviehash):
         z = zipfile.ZipFile(io.BytesIO(zip_resp.content))
         for f in z.filelist:
             if f.filename.endswith('.srt'):
-                print("\tDownloaded subtitle, origin:", zip_resp.url)
+                print("\tDownloaded subtitle, original name:", f.filename)
                 f.filename = f'{title}.srt'
                 z.extract(f, '.')
 
